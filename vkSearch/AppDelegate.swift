@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyVK
 
 var vkDelegateReference: SwiftyVKDelegate?
 
