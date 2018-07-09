@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import RxCocoa
 
 protocol UsersViewModeling {
   // MARK: - Input
@@ -15,6 +16,7 @@ protocol UsersViewModeling {
   
   // MARK: - Output
   var cellModels: Observable<[UserCellModeling]> { get }
+  var presentProfile: Observable<ProfileViewModeling> { get }
 }
 
 class UsersViewModel: UsersViewModeling {
@@ -24,6 +26,7 @@ class UsersViewModel: UsersViewModeling {
   
   // MARK: - Output
   let cellModels: Observable<[UserCellModeling]>
+  let presentProfile: Observable<ProfileViewModeling>
   
   init(apiworker: APIWorking) {
     
@@ -43,6 +46,14 @@ class UsersViewModel: UsersViewModeling {
       userSearch.items.map { user in
         UserCellModel(apiwoker: apiworker, imageUrl: user.photo_100, firstName: user.first_name, lastName: user.last_name)
       }
+    }
+    
+    presentProfile = cellDidSelect
+      .withLatestFrom(searchResults) { cell, results in
+        (cell, results)
+      }
+      .map { cell, results in
+        ProfileViewModel(apiworker: apiworker, currentUser: results.items[cell])
     }
     
   }
