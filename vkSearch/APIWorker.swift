@@ -9,9 +9,12 @@
 import SwiftyVK
 import SwiftyJSON
 import RxSwift
+import Alamofire
+import AlamofireImage
 
 protocol APIWorking {
   func search(_ query: String, offset: Int, count: Int) -> Observable<Users>
+  func photoGet(_ url: String) -> Observable<UIImage>
 }
 
 final class APIWorker: APIWorking {
@@ -28,6 +31,21 @@ final class APIWorker: APIWorking {
           observer.onError(error)
         }
         .send()
+      return Disposables.create()
+    }
+  }
+  
+  func photoGet(_ url: String) -> Observable<UIImage> {
+    return Observable.create { observer in
+      Alamofire.request(url).responseImage { response in
+        switch response.result {
+        case.success(let photo):
+          observer.onNext(photo)
+          observer.onCompleted()
+        case .failure(let error):
+          observer.onError(error)
+        }
+      }
       return Disposables.create()
     }
   }
