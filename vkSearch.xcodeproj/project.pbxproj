@@ -13,6 +13,7 @@
 		0E4ABDC220F2FF470059AFDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E4ABDC120F2FF470059AFDB /* Assets.xcassets */; };
 		0E4ABDC520F2FF470059AFDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4ABDC320F2FF470059AFDB /* LaunchScreen.storyboard */; };
 		0E4ABDCD20F305960059AFDB /* VKDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ABDCC20F305960059AFDB /* VKDelegate.swift */; };
+		0E4ABDCF20F30A5F0059AFDB /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ABDCE20F30A5F0059AFDB /* Users.swift */; };
 		E9834397998A6B2A1CF18FFB /* Pods_vkSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53968A97B73D902BC44A56E9 /* Pods_vkSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		0E4ABDC420F2FF470059AFDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E4ABDC620F2FF470059AFDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E4ABDCC20F305960059AFDB /* VKDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKDelegate.swift; sourceTree = "<group>"; };
+		0E4ABDCE20F30A5F0059AFDB /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		53968A97B73D902BC44A56E9 /* Pods_vkSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vkSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B2E108E50D8841A315CEF66 /* Pods-vkSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vkSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-vkSearch/Pods-vkSearch.release.xcconfig"; sourceTree = "<group>"; };
 		BF3941ED8F45408E3D18A1B9 /* Pods-vkSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vkSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vkSearch/Pods-vkSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				0E4ABDBA20F2FF470059AFDB /* AppDelegate.swift */,
+				0E4ABDCE20F30A5F0059AFDB /* Users.swift */,
 				0E4ABDBC20F2FF470059AFDB /* ViewController.swift */,
 				0E4ABDBE20F2FF470059AFDB /* Main.storyboard */,
 				0E4ABDC120F2FF470059AFDB /* Assets.xcassets */,
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E4ABDCF20F30A5F0059AFDB /* Users.swift in Sources */,
 				0E4ABDBD20F2FF470059AFDB /* ViewController.swift in Sources */,
 				0E4ABDBB20F2FF470059AFDB /* AppDelegate.swift in Sources */,
 				0E4ABDCD20F305960059AFDB /* VKDelegate.swift in Sources */,
