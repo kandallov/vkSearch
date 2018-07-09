@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E4ABDBB20F2FF470059AFDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ABDBA20F2FF470059AFDB /* AppDelegate.swift */; };
-		0E4ABDBD20F2FF470059AFDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ABDBC20F2FF470059AFDB /* ViewController.swift */; };
+		0E4ABDBD20F2FF470059AFDB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ABDBC20F2FF470059AFDB /* SearchViewController.swift */; };
 		0E4ABDC020F2FF470059AFDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4ABDBE20F2FF470059AFDB /* Main.storyboard */; };
 		0E4ABDC220F2FF470059AFDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E4ABDC120F2FF470059AFDB /* Assets.xcassets */; };
 		0E4ABDC520F2FF470059AFDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4ABDC320F2FF470059AFDB /* LaunchScreen.storyboard */; };
@@ -17,13 +17,14 @@
 		0E4ABDD120F30B280059AFDB /* APIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ABDD020F30B280059AFDB /* APIWorker.swift */; };
 		0E4ABDD320F3170D0059AFDB /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ABDD220F3170D0059AFDB /* UsersViewModel.swift */; };
 		0E4ABDD520F317740059AFDB /* UserCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ABDD420F317740059AFDB /* UserCellModel.swift */; };
+		0E4ABDDC20F3200F0059AFDB /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ABDDB20F3200F0059AFDB /* UserCell.swift */; };
 		E9834397998A6B2A1CF18FFB /* Pods_vkSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53968A97B73D902BC44A56E9 /* Pods_vkSearch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E4ABDB720F2FF470059AFDB /* vkSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vkSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4ABDBA20F2FF470059AFDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E4ABDBC20F2FF470059AFDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0E4ABDBC20F2FF470059AFDB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0E4ABDBF20F2FF470059AFDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E4ABDC120F2FF470059AFDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E4ABDC420F2FF470059AFDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -33,6 +34,7 @@
 		0E4ABDD020F30B280059AFDB /* APIWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWorker.swift; sourceTree = "<group>"; };
 		0E4ABDD220F3170D0059AFDB /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		0E4ABDD420F317740059AFDB /* UserCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellModel.swift; sourceTree = "<group>"; };
+		0E4ABDDB20F3200F0059AFDB /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		53968A97B73D902BC44A56E9 /* Pods_vkSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vkSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B2E108E50D8841A315CEF66 /* Pods-vkSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vkSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-vkSearch/Pods-vkSearch.release.xcconfig"; sourceTree = "<group>"; };
 		BF3941ED8F45408E3D18A1B9 /* Pods-vkSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vkSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vkSearch/Pods-vkSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,19 +73,76 @@
 		0E4ABDB920F2FF470059AFDB /* vkSearch */ = {
 			isa = PBXGroup;
 			children = (
+				0E4ABDD620F319B60059AFDB /* Model */,
+				0E4ABDD720F319C80059AFDB /* View */,
+				0E4ABDD820F319D10059AFDB /* ViewModel */,
 				0E4ABDBA20F2FF470059AFDB /* AppDelegate.swift */,
-				0E4ABDCE20F30A5F0059AFDB /* Users.swift */,
-				0E4ABDBC20F2FF470059AFDB /* ViewController.swift */,
 				0E4ABDBE20F2FF470059AFDB /* Main.storyboard */,
 				0E4ABDC120F2FF470059AFDB /* Assets.xcassets */,
 				0E4ABDC320F2FF470059AFDB /* LaunchScreen.storyboard */,
 				0E4ABDC620F2FF470059AFDB /* Info.plist */,
-				0E4ABDCC20F305960059AFDB /* VKDelegate.swift */,
-				0E4ABDD020F30B280059AFDB /* APIWorker.swift */,
+			);
+			path = vkSearch;
+			sourceTree = "<group>";
+		};
+		0E4ABDD620F319B60059AFDB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E4ABDD920F319F00059AFDB /* Entities */,
+				0E4ABDDA20F31A0F0059AFDB /* Services */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E4ABDD720F319C80059AFDB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0E4ABDDD20F321860059AFDB /* Controllers */,
+				0E4ABDDE20F321920059AFDB /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E4ABDD820F319D10059AFDB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
 				0E4ABDD220F3170D0059AFDB /* UsersViewModel.swift */,
 				0E4ABDD420F317740059AFDB /* UserCellModel.swift */,
 			);
-			path = vkSearch;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0E4ABDD920F319F00059AFDB /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				0E4ABDCE20F30A5F0059AFDB /* Users.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		0E4ABDDA20F31A0F0059AFDB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0E4ABDD020F30B280059AFDB /* APIWorker.swift */,
+				0E4ABDCC20F305960059AFDB /* VKDelegate.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0E4ABDDD20F321860059AFDB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0E4ABDBC20F2FF470059AFDB /* SearchViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0E4ABDDE20F321920059AFDB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0E4ABDDB20F3200F0059AFDB /* UserCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		284500081A0F09FF82BFAE26 /* Pods */ = {
@@ -246,10 +305,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E4ABDDC20F3200F0059AFDB /* UserCell.swift in Sources */,
 				0E4ABDD520F317740059AFDB /* UserCellModel.swift in Sources */,
 				0E4ABDCF20F30A5F0059AFDB /* Users.swift in Sources */,
 				0E4ABDD320F3170D0059AFDB /* UsersViewModel.swift in Sources */,
-				0E4ABDBD20F2FF470059AFDB /* ViewController.swift in Sources */,
+				0E4ABDBD20F2FF470059AFDB /* SearchViewController.swift in Sources */,
 				0E4ABDBB20F2FF470059AFDB /* AppDelegate.swift in Sources */,
 				0E4ABDCD20F305960059AFDB /* VKDelegate.swift in Sources */,
 				0E4ABDD120F30B280059AFDB /* APIWorker.swift in Sources */,
