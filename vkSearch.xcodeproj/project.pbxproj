@@ -18,6 +18,7 @@
 		0E4ABDD320F3170D0059AFDB /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ABDD220F3170D0059AFDB /* UsersViewModel.swift */; };
 		0E4ABDD520F317740059AFDB /* UserCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ABDD420F317740059AFDB /* UserCellModel.swift */; };
 		0E4ABDDC20F3200F0059AFDB /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ABDDB20F3200F0059AFDB /* UserCell.swift */; };
+		0E4ABDE220F32D940059AFDB /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ABDE120F32D940059AFDB /* CircleView.swift */; };
 		E9834397998A6B2A1CF18FFB /* Pods_vkSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53968A97B73D902BC44A56E9 /* Pods_vkSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		0E4ABDD220F3170D0059AFDB /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		0E4ABDD420F317740059AFDB /* UserCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellModel.swift; sourceTree = "<group>"; };
 		0E4ABDDB20F3200F0059AFDB /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		0E4ABDE120F32D940059AFDB /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		53968A97B73D902BC44A56E9 /* Pods_vkSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vkSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B2E108E50D8841A315CEF66 /* Pods-vkSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vkSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-vkSearch/Pods-vkSearch.release.xcconfig"; sourceTree = "<group>"; };
 		BF3941ED8F45408E3D18A1B9 /* Pods-vkSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vkSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vkSearch/Pods-vkSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,10 +75,11 @@
 		0E4ABDB920F2FF470059AFDB /* vkSearch */ = {
 			isa = PBXGroup;
 			children = (
+				0E4ABDBA20F2FF470059AFDB /* AppDelegate.swift */,
 				0E4ABDD620F319B60059AFDB /* Model */,
 				0E4ABDD720F319C80059AFDB /* View */,
 				0E4ABDD820F319D10059AFDB /* ViewModel */,
-				0E4ABDBA20F2FF470059AFDB /* AppDelegate.swift */,
+				0E4ABDE020F32D670059AFDB /* Extensions */,
 				0E4ABDBE20F2FF470059AFDB /* Main.storyboard */,
 				0E4ABDC120F2FF470059AFDB /* Assets.xcassets */,
 				0E4ABDC320F2FF470059AFDB /* LaunchScreen.storyboard */,
@@ -143,6 +146,14 @@
 				0E4ABDDB20F3200F0059AFDB /* UserCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		0E4ABDE020F32D670059AFDB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0E4ABDE120F32D940059AFDB /* CircleView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		284500081A0F09FF82BFAE26 /* Pods */ = {
@@ -305,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E4ABDE220F32D940059AFDB /* CircleView.swift in Sources */,
 				0E4ABDDC20F3200F0059AFDB /* UserCell.swift in Sources */,
 				0E4ABDD520F317740059AFDB /* UserCellModel.swift in Sources */,
 				0E4ABDCF20F30A5F0059AFDB /* Users.swift in Sources */,
