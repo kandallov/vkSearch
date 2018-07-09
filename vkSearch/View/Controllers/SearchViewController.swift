@@ -17,6 +17,7 @@ class SearchViewController: UIViewController {
   
   var viewModel: UsersViewModeling!
   private let disposeBag = DisposeBag()
+  private var profileViewModel: ProfileViewModeling!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -24,6 +25,7 @@ class SearchViewController: UIViewController {
   }
   
   private func setupBindings() {
+    
     searchBar.rx.text.orEmpty
       .bind(to: viewModel.searchText)
       .disposed(by: disposeBag)
@@ -40,6 +42,23 @@ class SearchViewController: UIViewController {
         }
       }).disposed(by: disposeBag)
     
+    tableView.rx.itemSelected
+      .map { $0.row }
+      .bind(to: viewModel.cellDidSelect)
+      .disposed(by: disposeBag)
+    
+    viewModel.presentProfile
+      .subscribe(onNext: { [unowned self] viewModel in
+        self.profileViewModel = viewModel
+        self.performSegue(withIdentifier: "toProfile", sender: self)
+      }).disposed(by: disposeBag)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "toProfile" {
+      let controller = segue.destination as! ProfileViewController
+      controller.viewModel = profileViewModel
+    }
   }
   
 }
