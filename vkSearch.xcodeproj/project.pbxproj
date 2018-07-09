@@ -23,6 +23,7 @@
 		0E4ABDE620F352AC0059AFDB /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ABDE520F352AC0059AFDB /* ProfileViewModel.swift */; };
 		0E4ABDE820F3535B0059AFDB /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ABDE720F3535B0059AFDB /* UserProfileModel.swift */; };
 		0E4ABDEA20F353CF0059AFDB /* CalcAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ABDE920F353CF0059AFDB /* CalcAge.swift */; };
+		0E4ABDEC20F35A650059AFDB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ABDEB20F35A650059AFDB /* ProfileViewController.swift */; };
 		E9834397998A6B2A1CF18FFB /* Pods_vkSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53968A97B73D902BC44A56E9 /* Pods_vkSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		0E4ABDE520F352AC0059AFDB /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		0E4ABDE720F3535B0059AFDB /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
 		0E4ABDE920F353CF0059AFDB /* CalcAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcAge.swift; sourceTree = "<group>"; };
+		0E4ABDEB20F35A650059AFDB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		53968A97B73D902BC44A56E9 /* Pods_vkSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vkSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B2E108E50D8841A315CEF66 /* Pods-vkSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vkSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-vkSearch/Pods-vkSearch.release.xcconfig"; sourceTree = "<group>"; };
 		BF3941ED8F45408E3D18A1B9 /* Pods-vkSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vkSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vkSearch/Pods-vkSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				0E4ABDBC20F2FF470059AFDB /* SearchViewController.swift */,
+				0E4ABDEB20F35A650059AFDB /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				0E4ABDDC20F3200F0059AFDB /* UserCell.swift in Sources */,
 				0E4ABDE420F3509C0059AFDB /* UserProfile.swift in Sources */,
 				0E4ABDD520F317740059AFDB /* UserCellModel.swift in Sources */,
+				0E4ABDEC20F35A650059AFDB /* ProfileViewController.swift in Sources */,
 				0E4ABDCF20F30A5F0059AFDB /* Users.swift in Sources */,
 				0E4ABDD320F3170D0059AFDB /* UsersViewModel.swift in Sources */,
 				0E4ABDBD20F2FF470059AFDB /* SearchViewController.swift in Sources */,

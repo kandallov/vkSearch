@@ -8,6 +8,8 @@
 
 import UIKit
 import SwiftyVK
+import Swinject
+import SwinjectStoryboard
 
 var vkDelegateReference: SwiftyVKDelegate?
 
@@ -15,10 +17,37 @@ var vkDelegateReference: SwiftyVKDelegate?
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-
+  var container: Container!
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     vkDelegateReference = VKDelegate()
+    
+    container = Container() { container in
+      //Model
+      container.register(APIWorking.self) { _ in
+        APIWorker()
+      }
+      //ViewModel
+      container.register(UsersViewModeling.self) { r in
+        UsersViewModel(apiworker: r.resolve(APIWorking.self)!)
+      }
+      //Views
+      container.storyboardInitCompleted(UINavigationController.self) { _,_ in }
+      container.storyboardInitCompleted(SearchViewController.self) { r,c in
+        c.viewModel = r.resolve(UsersViewModeling.self)!
+        }
+      container.storyboardInitCompleted(ProfileViewController.self) { _,_ in }
+      }
+      
+      // Initial Screen
+      let window = UIWindow(frame: UIScreen.main.bounds)
+      window.backgroundColor = UIColor.white
+      window.makeKeyAndVisible()
+      self.window = window
+      let bundle = Bundle(for: SearchViewController.self)
+      let storyboard = SwinjectStoryboard.create(name: "Main", bundle: bundle, container: container)
+      window.rootViewController = storyboard.instantiateInitialViewController()
+      
     return true
   }
   
