@@ -15,6 +15,7 @@ import AlamofireImage
 protocol APIWorking {
   func search(_ query: String, offset: Int, count: Int) -> Observable<Users>
   func photoGet(_ url: String) -> Observable<UIImage>
+  func userGet(_ userID: String) -> Observable<UserProfile>
 }
 
 final class APIWorker: APIWorking {
@@ -46,6 +47,24 @@ final class APIWorker: APIWorking {
           observer.onError(error)
         }
       }
+      return Disposables.create()
+    }
+  }
+  
+  func userGet(_ userID: String) -> Observable<UserProfile> {
+    return Observable.create { observer in
+      VK.API.Users.get([.userId: "\(userID)", .fields: "photo_200, bdate, city"])
+        .configure(with: Config.init(httpMethod: .POST))
+        .onSuccess {
+          let user = try JSONDecoder().decode([UserProfile].self, from: $0)
+          guard let currentUser = user.first else { return }
+          observer.onNext(currentUser)
+          observer.onCompleted()
+        }
+        .onError { (error) in
+          observer.onError(error)
+        }
+        .send()
       return Disposables.create()
     }
   }
