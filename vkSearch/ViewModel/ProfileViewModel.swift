@@ -36,7 +36,7 @@ class ProfileViewModel: ProfileViewModeling {
     }
     
     let photoPlaceholder = #imageLiteral(resourceName: "userPlaceholder100")
-    image = searchResult
+    photo = searchResult
       .map { user in
         let imageUrl = user.photo_200
         return imageUrl
