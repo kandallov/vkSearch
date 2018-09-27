@@ -11,7 +11,7 @@ import SwiftyVK
 
 class VKDelegate: SwiftyVKDelegate {
   
-  let appId = "6625993"
+  let appId = "xxxxxxx" // you can get it free on - https://vk.com/dev
   let scopes: Scopes = []
   
   init() {
